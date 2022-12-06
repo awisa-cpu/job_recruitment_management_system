@@ -36,7 +36,9 @@ class _JobsHomePageState extends State<JobsHomePage> {
               children: [
                 Expanded(child: Container()),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(adminLogin);
+                  },
                   icon: const Icon(
                     Icons.assignment_ind_outlined,
                     color: Colors.black,
