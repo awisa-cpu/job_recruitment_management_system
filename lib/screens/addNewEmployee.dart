@@ -139,7 +139,7 @@ class _EmployeeAddState extends State<EmployeeAdd> {
                   ),
                   validator: (value) {
                     if (value!.isEmpty ||
-                        !RegExp(r'^[0-9]{0,9+$').hasMatch(value)) {
+                        !RegExp(r'^[0-9]+$').hasMatch(value)) {
                       return "Enter Employee id";
                     } else {
                       return null;
@@ -205,7 +205,7 @@ class _EmployeeAddState extends State<EmployeeAdd> {
                   ),
                   validator: (value) {
                     if (value!.isEmpty ||
-                        !RegExp(r'^[0-9]{0,9+$').hasMatch(value)) {
+                        !RegExp(r'^[0-9]+$').hasMatch(value)) {
                       return "Enter Recruiter id";
                     } else {
                       return null;
@@ -238,7 +238,7 @@ class _EmployeeAddState extends State<EmployeeAdd> {
                   ),
                   validator: (value) {
                     if (value!.isEmpty ||
-                        !RegExp(r'^[0-9]{0,9+$').hasMatch(value)) {
+                        !RegExp(r'^[0-9]+$').hasMatch(value)) {
                       return "Enter Job id";
                     } else {
                       return null;
@@ -271,7 +271,7 @@ class _EmployeeAddState extends State<EmployeeAdd> {
                   ),
                   validator: (value) {
                     if (value!.isEmpty ||
-                        !RegExp(r'^[0-9]{0,9+$').hasMatch(value)) {
+                        !RegExp(r'^[0-9]+$').hasMatch(value)) {
                       return "Enter Department id";
                     } else {
                       return null;
@@ -304,7 +304,7 @@ class _EmployeeAddState extends State<EmployeeAdd> {
                   ),
                   validator: (value) {
                     if (value!.isEmpty ||
-                        !RegExp(r'^[0-9]{0,9+$').hasMatch(value)) {
+                        !RegExp(r'^[0-9]+$').hasMatch(value)) {
                       return "Enter salary";
                     } else {
                       return null;
@@ -337,7 +337,7 @@ class _EmployeeAddState extends State<EmployeeAdd> {
                   ),
                   validator: (value) {
                     if (value!.isEmpty ||
-                        !RegExp(r'^[0-9]{0,9+$').hasMatch(value)) {
+                        !RegExp(r'^[0-9]+$').hasMatch(value)) {
                       return "Enter dependent id";
                     } else {
                       return null;

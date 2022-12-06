@@ -1,6 +1,6 @@
 class JobModel {
   String jobid;
-  String jobClassification;
+  String jobclassification;
   String jobDecription;
   String jobName;
   String appliedDepartment;
@@ -10,7 +10,7 @@ class JobModel {
 
   JobModel(
     this.jobid,
-    this.jobClassification,
+    this.jobclassification,
     this.jobDecription,
     this.jobName,
     this.appliedDepartment,
@@ -21,7 +21,7 @@ class JobModel {
 
   Map<String, dynamic> toJson() => {
         "jobid": jobid,
-        "jobClassification": jobClassification,
+        "jobclassification": jobclassification,
         "jobDescription": jobDecription,
         "jobName": jobName,
         "appliedDepartment": appliedDepartment,

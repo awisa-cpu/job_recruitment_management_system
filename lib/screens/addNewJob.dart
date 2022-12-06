@@ -19,7 +19,7 @@ class _JobAddState extends State<JobAdd> {
   final _formKey = GlobalKey<FormState>();
 
   final _jobid = TextEditingController();
-  final _jobClassification = TextEditingController();
+  final _jobclassification = TextEditingController();
   final _jobDescription = TextEditingController();
   final _jobName = TextEditingController();
   final _appliedDepartment = TextEditingController();
@@ -30,7 +30,7 @@ class _JobAddState extends State<JobAdd> {
   _addNewJob() async {
     JobModel userModel = JobModel(
       _jobid.text.trim(),
-      _jobClassification.text.trim(),
+      _jobclassification.text.trim(),
       _jobDescription.text.trim(),
       _jobName.text.trim(),
       _appliedDepartment.text,
@@ -49,7 +49,7 @@ class _JobAddState extends State<JobAdd> {
 
       if (response.statusCode == 200) {
         //from the flutter app the connection with the api is ->succesful
-
+        print(response.body);
         if (response.body == "1") {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text("Applied Succesfully")),
@@ -138,7 +138,7 @@ class _JobAddState extends State<JobAdd> {
                   ),
                   validator: (value) {
                     if (value!.isEmpty ||
-                        !RegExp(r'^[0-9]{0,9+$').hasMatch(value)) {
+                        !RegExp(r'^[0-9]+$').hasMatch(value)) {
                       return "Enter Job id";
                     } else {
                       return null;
@@ -182,7 +182,7 @@ class _JobAddState extends State<JobAdd> {
                   height: height * 0.01,
                 ),
                 TextFormField(
-                  controller: _jobClassification,
+                  controller: _jobclassification,
                   decoration: InputDecoration(
                     labelText: "Job Description",
                     prefixIcon: const Icon(
@@ -303,7 +303,7 @@ class _JobAddState extends State<JobAdd> {
                   ),
                   validator: (value) {
                     if (value!.isEmpty ||
-                        !RegExp(r'^[0-9]{0,9+$').hasMatch(value)) {
+                        !RegExp(r'^[0-9]+$').hasMatch(value)) {
                       return "Enter salary";
                     } else {
                       return null;
